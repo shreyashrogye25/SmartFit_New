@@ -1,0 +1,734 @@
+/* ==========================================================================
+   SMARTFIT - Dashboard Styling (Blueprint Matched in White & Blue)
+   Clean, hand-crafted, human engineer layout
+   ========================================================================== */
+
+/* Main Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-app);
+}
+
+/* Sidebar */
+.app-sidebar {
+  width: var(--sidebar-w);
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.sidebar-brand {
+  height: var(--header-h);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.brand-icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  border: 1.5px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.04em;
+}
+
+.brand-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.03em;
+}
+
+.sidebar-menu-wrapper {
+  flex: 1;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.menu-section-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-subtle);
+  padding: 0 12px 8px;
+}
+
+.sidebar-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--ease-fast);
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--text-heading);
+  background: var(--bg-subtle);
+}
+
+.nav-link.active {
+  color: var(--primary);
+  background: var(--bg-active-pill);
+  border-color: #DBEAFE;
+  font-weight: 600;
+}
+
+.nav-link .svg-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+.sidebar-footer-nav {
+  padding-top: 12px;
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Main Content Area */
+.app-main {
+  flex: 1;
+  margin-left: var(--sidebar-w);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Header */
+.dashboard-header {
+  height: var(--header-h);
+  background: var(--bg-sidebar);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.header-meta-breadcrumb {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.header-greeting {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: -0.02em;
+}
+
+.header-greeting .user-highlight {
+  color: var(--primary);
+}
+
+.header-subtitle {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* Header Right Actions */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notification-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  position: relative;
+}
+
+.notification-btn:hover {
+  background: var(--bg-subtle);
+  color: var(--text-heading);
+  border-color: #CBD5E1;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #F59E0B;
+  border: 1.5px solid #FFFFFF;
+}
+
+.profile-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 12px 4px 4px;
+  border-radius: var(--radius-full);
+  background: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  cursor: pointer;
+  transition: all var(--ease-fast);
+}
+
+.profile-pill:hover {
+  border-color: var(--primary-border);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563EB 0%, #0284C7 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 1.2;
+}
+
+.profile-role {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+/* Dashboard Content Grid */
+.dashboard-grid-container {
+  padding: 24px 28px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==========================================================================
+   ROW 1: 4 Top Metric Cards
+   ========================================================================== */
+.metrics-quad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.metric-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 145px;
+  transition: transform var(--ease-fast), box-shadow var(--ease-fast);
+}
+
+.metric-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: #CBD5E1;
+}
+
+.metric-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.metric-icon-square {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-subtle);
+  color: var(--text-heading);
+}
+
+.metric-icon-square.blue { background: #EFF6FF; color: var(--primary); }
+.metric-icon-square.sky { background: #E0F2FE; color: var(--sky); }
+.metric-icon-square.amber { background: #FFFBEB; color: var(--amber); }
+.metric-icon-square.emerald { background: #ECFDF5; color: var(--emerald); }
+
+.metric-title-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: capitalize;
+  margin-bottom: 2px;
+}
+
+.metric-number-display {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.metric-number-display .sub-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-subtle);
+  margin-left: 3px;
+}
+
+.metric-bar-track {
+  height: 4px;
+  background: var(--bg-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.metric-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  transition: width 0.4s ease;
+}
+
+.metric-bar-fill.sky { background: #0EA5E9; }
+.metric-bar-fill.amber { background: #F59E0B; }
+.metric-bar-fill.emerald { background: #10B981; }
+
+.metric-footer-caption {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-inline-link {
+  color: var(--sky);
+  font-weight: 600;
+  font-size: 0.75rem;
+  background: transparent;
+  padding: 0;
+}
+
+.btn-inline-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   ROW 2: Analytics Row (Health Score & Today's Summary)
+   ========================================================================== */
+.analytics-dual-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 18px;
+}
+
+.card-panel {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-card);
+  padding: 22px;
+}
+
+.panel-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.panel-meta-title {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sky);
+  margin-bottom: 2px;
+}
+
+.panel-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+/* Circular Gauge Card */
+.health-score-layout {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gauge-svg-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.gauge-circle-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gauge-base-circle {
+  fill: none;
+  stroke: #F1F5F9;
+  stroke-width: 10;
+}
+
+.gauge-value-circle {
+  fill: none;
+  stroke: #0EA5E9;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 280;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.gauge-center-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-score-value {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.gauge-score-max {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-subtle);
+}
+
+.health-score-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.health-status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--sky);
+  background: var(--sky-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+}
+
+.health-status-chip .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sky);
+}
+
+.health-guidance-copy {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.health-sub-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sub-pill-item {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-heading);
+}
+
+.sub-pill-item .val {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Activity Summary Chart (Clean Handcrafted SVG/CSS Bar Chart) */
+.chart-dropdown-select {
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-hairline);
+  background: #FFFFFF;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.bar-chart-flex {
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.chart-bar-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 6px;
+  position: relative;
+  cursor: pointer;
+}
+
+.chart-bar-column .tooltip {
+  position: absolute;
+  top: -24px;
+  background: #0F172A;
+  color: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.chart-bar-column:hover .tooltip {
+  opacity: 1;
+}
+
+.chart-bar-bg {
+  width: 26px;
+  height: 110px;
+  background: #F1F5F9;
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.chart-bar-core {
+  width: 100%;
+  border-radius: 6px;
+  background: #93C5FD;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chart-bar-column.active .chart-bar-core {
+  background: #0EA5E9;
+}
+
+.chart-day-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-subtle);
+}
+
+.chart-bar-column.active .chart-day-label {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   ROW 3: Recommendation & Today's Challenge (Daily Mission)
+   ========================================================================== */
+.bottom-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.recommendation-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rec-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rec-heading {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--text-heading);
+}
+
+.rec-body-text {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.btn-rec-action {
+  align-self: flex-start;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: var(--primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-rec-action:hover {
+  border-color: var(--primary);
+  background: var(--bg-active-pill);
+}
+
+/* Daily Mission List */
+.mission-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mission-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--bg-subtle);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-hairline);
+  transition: all var(--ease-fast);
+}
+
+.mission-row:hover {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+}
+
+.mission-row.done {
+  background: #F0FDF4;
+  border-color: #BBF7D0;
+}
+
+.mission-row.done .mission-label {
+  text-decoration: line-through;
+  color: var(--text-subtle);
+}
+
+.mission-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mission-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--emerald);
+  cursor: pointer;
+}
+
+.mission-label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  cursor: pointer;
+}
+
+.mission-xp-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--emerald);
+  background: var(--emerald-light);
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}

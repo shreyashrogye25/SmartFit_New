@@ -1,0 +1,118 @@
+/* ==========================================================================
+   SMARTFIT - Responsive Design
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .metrics-row-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-row-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-row-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diet-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workout-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --sidebar-width: 72px;
+  }
+
+  .sidebar-brand .brand-name,
+  .nav-section-title,
+  .nav-link span:not(.nav-icon) {
+    display: none;
+  }
+
+  .nav-link {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .app-main {
+    margin-left: var(--sidebar-width);
+  }
+
+  .water-module-grid,
+  .bmi-tool-grid,
+  .meals-category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-header {
+    padding: 0 16px;
+  }
+
+  .dashboard-content-body,
+  .module-view-container {
+    padding: 20px 16px;
+  }
+
+  .metrics-row-grid,
+  .diet-summary-grid,
+  .workout-cards-grid,
+  .badges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-score-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .score-status-pill {
+    align-self: center;
+  }
+
+  .settings-grid-2,
+  .options-grid-2,
+  .options-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .workout-stats-banner {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .modal-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .complete-stats-quad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workout-action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .workout-action-dual-buttons {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .workout-action-dual-buttons button {
+    flex: 1;
+    justify-content: center;
+  }
+}

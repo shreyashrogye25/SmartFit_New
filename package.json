@@ -1,0 +1,18 @@
+{
+  "name": "smartfit-fitness",
+  "version": "1.0.0",
+  "description": "SmartFit - Modern Fitness and Health Web Application with White & Blue Theme",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "jspdf": "^4.2.1"
+  }
+}
